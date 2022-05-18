@@ -1,0 +1,37 @@
+.navigate {
+  color: white;
+}
+
+.navigate ul {
+  margin: 0;
+}
+
+.navigate li {
+  display: inline;
+  margin-right: 5px;
+  list-style-type: none;
+}
+
+.navigate-link {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigate-link_active {
+  color: red;
+}
+
+.navigate-link:hover {
+  color: red;
+}
+
+.divider::before {
+  content: '/';
+  margin: 0 3px;
+  color: white;
+  font-size: 1.5em;
+}
+/*# sourceMappingURL=headerNav.min.css.map */

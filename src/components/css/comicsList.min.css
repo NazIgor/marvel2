@@ -1,0 +1,74 @@
+.btn {
+  width: 95px;
+  height: 40px;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  -webkit-box-shadow: 3px 0px 6px rgba(255, 255, 255, 0.5);
+          box-shadow: 3px 0px 6px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.btn_light {
+  -webkit-box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  width: 100px;
+  height: 45px;
+  -webkit-box-shadow: 3px 0px 6px rgba(90, 4, 4, 0.603);
+          box-shadow: 3px 0px 6px rgba(90, 4, 4, 0.603);
+}
+
+.btn:disabled {
+  -webkit-filter: grayscale(0.6);
+          filter: grayscale(0.6);
+}
+
+.homepage {
+  color: white;
+  background-color: #b80303;
+}
+
+.wiki {
+  color: white;
+  background-color: dimgrey;
+}
+
+.comics {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: white;
+}
+
+.comics h5 {
+  margin: 0;
+}
+
+.comics_item {
+  width: 250px;
+}
+
+.comics img {
+  margin: 0 auto;
+  -webkit-box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.8);
+          box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+.comics .load_more {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+}
+/*# sourceMappingURL=comicsList.min.css.map */

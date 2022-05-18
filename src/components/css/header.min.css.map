@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI;EAChB,KAAK,ECRG,KAAK;EDSb,SAAS,EAAE,GAAG;CAIjB;;AAXD,AAQI,OARG,CAQD,OAAO,CAAA;EACL,KAAK,ECVM,GAAG;CDWjB",
+    "sources": [
+        "../header/header.scss",
+        "../../resources/style/variables.scss"
+    ],
+    "names": [],
+    "file": "header.min.css"
+}

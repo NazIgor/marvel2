@@ -1,0 +1,39 @@
+.btn {
+  width: 95px;
+  height: 40px;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  -webkit-box-shadow: 3px 0px 6px rgba(255, 255, 255, 0.5);
+          box-shadow: 3px 0px 6px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.btn_light {
+  -webkit-box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  width: 100px;
+  height: 45px;
+  -webkit-box-shadow: 3px 0px 6px rgba(90, 4, 4, 0.603);
+          box-shadow: 3px 0px 6px rgba(90, 4, 4, 0.603);
+}
+
+.btn:disabled {
+  -webkit-filter: grayscale(0.6);
+          filter: grayscale(0.6);
+}
+
+.homepage {
+  color: white;
+  background-color: #b80303;
+}
+
+.wiki {
+  color: white;
+  background-color: dimgrey;
+}
+/*# sourceMappingURL=buttons.min.css.map */

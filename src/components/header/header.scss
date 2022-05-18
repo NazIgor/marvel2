@@ -1,0 +1,50 @@
+@import '../../resources/style/variables.scss';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;;
+    margin-top: 20px;
+    color: $main-color;
+    font-size: 1em;
+    & .marvel{
+        color: $main-active-color;
+    }
+}
+.navigate{
+    color:$main-color;
+    & ul{
+        margin: 0;
+    }
+    & li{
+        display: inline;
+        margin-right: 5px;
+        list-style-type: none;
+        
+    }
+    &-link{
+        font-size: 1.5em;
+        font-weight: 700;
+        color:$main-color;
+        text-decoration: none;
+        cursor: pointer;
+        &_active{
+            color: $main-active-color;
+        }
+        &:hover{
+            color: $main-active-color;
+        }
+
+    }
+
+}
+.divider{
+    &::before{
+        content: ' / ';
+        margin: 0 3px;
+        color: $main-color;
+        font-size: 1.5em;
+
+    }
+}
