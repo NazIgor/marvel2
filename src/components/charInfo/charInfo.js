@@ -4,6 +4,7 @@ import Spinner from '../spinner/Spinner';
 
 
 import '../../components/charInfo/charInfo.scss';
+import { Link } from 'react-router-dom';
 
  const CharInfo =(props)=>{
     const [data, setData]=useState(props.data),
@@ -15,13 +16,12 @@ import '../../components/charInfo/charInfo.scss';
         if (data.length>0){
             const comics=data.map((item,i)=>{
                 return(
-                    <a href={item.resourceURI} alt={item.name}
+                    <Link to={`/comic/${item.resourceURI.slice(43)}`}
                         key={'comics'+i}>
                        <div className="char_total_comics_item">
                             {item.name}
                         </div> 
-                    </a>
-                    
+                    </Link>
                 )
             })
             return (
@@ -45,7 +45,7 @@ import '../../components/charInfo/charInfo.scss';
                     setData(data);
                     });
         }
-        
+        // eslint-disable-next-line
     },[props.char])
 
     function contentChar() {        

@@ -22,13 +22,17 @@ class MarvelServices{
         return this._tranformData(res.data.results[0]);
     }
     getComics=async (offset=this._comicsOffset)=>{
-        const res=await this.getResource(`${this._apiBase}comics?limit=8&offset=${offset}&${this._apiKey}`);
-        
+        const res=await this.getResource(`${this._apiBase}comics?limit=8&offset=${offset}&${this._apiKey}`);        
         return await res.data.results.map(item=>this._transformComicsData(item))
+    }
+    getComic=async (id)=>{
+        const res=await this.getResource(`${this._apiBase}comics/${id}?${this._apiKey}`);        
+        return await res.data.results.map(item=>this._transformComicData(item))
     }
     _tranformData=(res)=>{
         return {
             id:res.id,
+            title:res.title,
             name: res.name,
             thumbnail: res.thumbnail.path +'.'+ res.thumbnail.extension,
             description: res.description,
@@ -44,6 +48,15 @@ class MarvelServices{
             title:res.title,
             price:res.prices[0].price,
             image: res.images.length>0? res.images[0].path+'.'+res.images[0].extension: 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg'
+        }
+    }
+    _transformComicData=res=>{
+        return{
+            id:res.id,
+            title:res.title,
+            price:res.prices[0].price,
+            image: res.images.length>0? res.images[0].path+'.'+res.images[0].extension: 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg',
+            description: res.textObjects.length>0 ? res.textObjects[0].text:'No information'
         }
     }
 }

@@ -16,7 +16,7 @@ const RandomChar =()=>{
                                     description: null,
                                     homepage: null,
                                     wiki:null}),
-          [loading, setLoading]=useState(true),
+          [loading, setLoading]=useState(false),
           [error, setError]=useState(false);
  
     const marvelService=new MarvelServices();
@@ -26,13 +26,15 @@ const RandomChar =()=>{
     
     const updateChar=()=>{
         const idChar=Math.floor(Math.random()*(1011500-1010801)+1010801);
+        // setLoading(true);
         marvelService
             .getCharacter(idChar)
             .then(char=>{
                 setChar(char);
                 setLoading(false);
                 setError(false);
-            }).catch(errorLoading());
+                })
+            .catch(()=>{errorLoading()});
     }
     function errorLoading(){
         setLoading(false);
@@ -66,6 +68,7 @@ const RandomChar =()=>{
     }
     function getUpdateChar(){
         setLoading(true);
+        setError(false);
         updateChar();
     }
     function rndChar(){
@@ -82,10 +85,10 @@ const RandomChar =()=>{
         )
     }
     
-    const errorMesage=error? <div className="spinner"><ErrorMessage/></div>:null;
-    const loadingContent=loading? <div className="spinner"><Spinner/></div>:null;
-    const content=!(loading || error)? getRandomChar():null
-    
+    const errorMesage=error ? <div className="spinner"><ErrorMessage/></div>:null;
+    const loadingContent=loading ? <div className="spinner"><Spinner/></div>:null;
+    const content=!(loading || error)? getRandomChar():null;
+
     return(
         <div className="random-char">
             {errorMesage}
